@@ -4,9 +4,9 @@
 node_modules/
 
 # Expo
-.expo/
-dist/
-web-build/
+# .expo/
+# dist/
+# web-build/
 
 # Native
 *.orig.*
@@ -16,8 +16,8 @@ web-build/
 *.key
 *.mobileprovision
 
-# Metro
-.metro-health-check*
+# # Metro
+# .metro-health-check*
 
 # debug
 npm-debug.*
