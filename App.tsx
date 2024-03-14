@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 25,
   },
   fontInterBold: {
-    marginTop: 89,
+    marginTop: 90,
     marginLeft: 25,
     color: "white",
     fontSize: 40,
