@@ -15,7 +15,7 @@ export default function App() {
     
     <View style={styles.container}>
       <Text style={styles.fontInterBold}>Sign up</Text>
-      <Text style={styles.fontInterThin}>Sign up to start Your Adventure</Text>
+      <Text style={styles.fontInterThin}>Sign up to start Your Adventure!</Text>
       <StatusBar style="auto"/>
     </View>
   );
