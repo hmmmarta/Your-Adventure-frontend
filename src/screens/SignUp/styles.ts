@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
     marginLeft: 25,
     color: "white",
     fontSize: 40,
-    fontFamily: "Inter_700Bold",
+    // fontFamily: "Inter_700Bold",
   },
   fontInterThin: {
-    fontFamily: "Inter_100Thin",
+    // fontFamily: "Inter_100Thin",
     color: "#969696",
     marginTop: 4,
     marginLeft: 25,

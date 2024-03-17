@@ -1,6 +1,7 @@
 import React, { useState, createContext, useContext } from "react";
 import axios from "axios";
 import * as KeyChain from "react-native-keychain";
+
 const AuthContext = createContext(null);
 
 // TODO: add API_URL
@@ -16,7 +17,7 @@ const AuthProvider = ({ children }: any) => {
     refreshToken: string | null;
     accessToken: string | null;
   }>({
-    authenticated: null,
+    authenticated: false,
     accessToken: null,
     refreshToken: null,
   });
@@ -25,7 +26,14 @@ const AuthProvider = ({ children }: any) => {
   const register = async (email: string, password: string) => {
     try {
       // TODO: change api end point
-      return await axios.post(`${API_URL}/users`, { email, password });
+      console.log("Registered");
+      setAuthState({
+        accessToken: "",
+        refreshToken: "",
+        authenticated: true,
+      });
+      console.log(authState);
+      // return await axios.post(`${API_URL}/users`, { email, password });
     } catch (err) {
       console.error(err);
     }
@@ -65,6 +73,8 @@ const AuthProvider = ({ children }: any) => {
     onRegister: register,
     onLogin: login,
     onLogOut: logout,
+    authState,
+    setAuthState,
   };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     fontSize: 18,
-    fontFamily: "Inter_600SemiBold",
+    // fontFamily: "Inter_600SemiBold",
   },
   textInputFocused: {
     borderColor: "#367AFF",

@@ -1,8 +1,6 @@
 import {
   View,
   Text,
-  StatusBar,
-  Alert,
   SafeAreaView,
   TextInput,
   TouchableOpacity,
@@ -12,6 +10,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 import styles from "./styles";
 import Button from "../../components/Button/Button";
+import { useAuth } from "../../context/AuthContex";
 const SignUp = () => {
   const [name, onChangeName] = React.useState("");
   const [dob, onChangeDOB] = React.useState("");
@@ -20,6 +19,7 @@ const SignUp = () => {
   const [show, setShow] = React.useState(false);
   const [visible, setVisible] = React.useState(true);
 
+  const authContex = useAuth();
   const [focusedInput, setFocusedInput] = React.useState(null);
 
   const handleFocus = (inputName: string) => {
@@ -101,7 +101,9 @@ const SignUp = () => {
       </SafeAreaView>
       <Button
         text="Sign up"
-        onPress={() => Alert.alert("Welcome to your Adventure")}
+        onPress={() => {
+          authContex.onRegister(email, password);
+        }}
       />
     </View>
   );
