@@ -1,3 +1,4 @@
+
 import { StyleSheet } from "react-native";
 const background = StyleSheet.create({
     container: {

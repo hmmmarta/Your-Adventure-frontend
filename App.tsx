@@ -1,3 +1,4 @@
+
 import React, {useState, useEffect} from 'react'
 import { View, Text } from 'react-native';
 import SignUp from './src/screens/SignUp/SignUp';
@@ -30,4 +31,5 @@ const App = () => {
   );
 }
 export default App;
+
 

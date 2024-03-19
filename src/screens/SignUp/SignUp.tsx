@@ -1,4 +1,5 @@
 
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
@@ -42,57 +43,56 @@ const TextInputExample = () => {
     };
   
     return (
+
       <SafeAreaView>
         <TextInput
           style={[
             styles.input,
+
             focusedInput === 'name' && styles.textInputFocused,
           ]}
           onChangeText={onChangeName}
           onFocus={() => handleFocus('name')}
-          onBlur={handleBlur}
-          value={name}
-          placeholder="Your Name"
-          placeholderTextColor="#969696"
-        />
-        <TextInput
-          style={[
-            styles.input,
+=======
+            focusedInput === "name" && styles.textInputFocused,
+          ]}
+          onChangeText={onChangeName}
+          onFocus={() => handleFocus("name")}
+
+
             focusedInput === 'dob' && styles.textInputFocused,
           ]}
           onChangeText={onChangeDOB}
           onFocus={() => handleFocus('dob')}
-          onBlur={handleBlur}
-          value={dob}
-          placeholder="Date of Birth"
-          keyboardType="numeric"
-          placeholderTextColor="#969696"
-        />
-        <TextInput
-          style={[
-            styles.input,
+=======
+            focusedInput === "dob" && styles.textInputFocused,
+          ]}
+          onChangeText={onChangeDOB}
+          onFocus={() => handleFocus("dob")}
+
+
             focusedInput === 'email' && styles.textInputFocused,
           ]}
           onChangeText={onChangeEmail}
           onFocus={() => handleFocus('email')}
-          onBlur={handleBlur}
-          value={email}
-          placeholder="Email"
-          placeholderTextColor="#969696"
-        />
-        <TextInput
-          style={[
-            styles.input,
+=======
+            focusedInput === "email" && styles.textInputFocused,
+          ]}
+          onChangeText={onChangeEmail}
+          onFocus={() => handleFocus("email")}
+
+
             focusedInput === 'password' && styles.textInputFocused,
           ]}
           onChangeText={ onChangePassword}
           onFocus={() => handleFocus('password')}
-          onBlur={handleBlur}
-          value={password}
-          placeholder="Password"
-          secureTextEntry={visible}
-          placeholderTextColor="#969696"
-        />
+=======
+            focusedInput === "password" && styles.textInputFocused,
+          ]}
+          onChangeText={onChangePassword}
+          onFocus={() => handleFocus("password")}
+
+
         <TouchableOpacity style={styles.btnEye} onPress={
           () => {
             setVisible(!visible)
@@ -110,6 +110,7 @@ const TextInputExample = () => {
   
 
   
+
 
 
 

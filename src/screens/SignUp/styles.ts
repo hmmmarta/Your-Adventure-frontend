@@ -7,12 +7,12 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 80,
     marginHorizontal: 25,
-  },
-  fontInterBold: {
-    marginTop: 90,
-    marginLeft: 25,
-    color: "white",
-    fontSize: 40,
+=======
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#1F1F2F",
+
     fontFamily: "Inter-Bold"
   },
   fontInterThin: {
@@ -21,15 +21,20 @@ const styles = StyleSheet.create({
     marginTop: 4,
     marginLeft: 25,
     fontSize: 20
+=======
+    fontFamily: "Inter_700Bold",
   },
-  input: {
-    height: 50,
-    marginTop: 40,
-    marginHorizontal: 25,
-    borderWidth: 1.5,
-    paddingLeft: 20,
-    borderColor: "#D9D9D9",
-    borderRadius: 10,
+  fontInterThin: {
+    fontFamily: "Inter_100Thin",
+    color: "#969696",
+    marginTop: 4,
+    marginLeft: 25,
+    fontSize: 20,
+  },
+  textInputFocused: {
+    borderColor: "#367AFF",
+
+
     color: "#969696"
   },
   button: {
