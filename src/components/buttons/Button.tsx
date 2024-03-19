@@ -1,6 +1,8 @@
 import { Alert, SafeAreaView, TouchableOpacity, View, Text } from "react-native";
 import styles from "../../screens/SignUp/styles";
 
+
+
 const SignUpButton = () => (
     <SafeAreaView style={styles.buttonPlacement}>
       <View>

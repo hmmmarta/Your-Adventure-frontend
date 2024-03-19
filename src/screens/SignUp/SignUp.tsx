@@ -1,4 +1,4 @@
-import {useFonts, Inter_700Bold, Inter_100Thin, Inter_600SemiBold} from '@expo-google-fonts/inter';
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
@@ -10,16 +10,10 @@ import SignUpButton from '../../components/buttons/Button';
 
 const SignUp = () => {
   
-  
-  const [fontsLoaded] = useFonts({
-    Inter_100Thin,
-    Inter_700Bold,
-    Inter_600SemiBold
-  });
- 
   return (
     
     <View style={background.container}>
+
       <Text style={styles.fontInterBold}>Sign up</Text>
       <Text style={styles.fontInterThin}>Sign up to start Your Adventure!</Text>
       <StatusBar style="auto"/>

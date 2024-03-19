@@ -1,4 +1,7 @@
 import { StyleSheet } from "react-native";
+
+
+
 const styles = StyleSheet.create({
   buttonPlacement: {
     flex: 1,
@@ -10,10 +13,10 @@ const styles = StyleSheet.create({
     marginLeft: 25,
     color: "white",
     fontSize: 40,
-    fontFamily: "Inter_700Bold"
+    fontFamily: "Inter-Bold"
   },
   fontInterThin: {
-    fontFamily: "Inter_100Thin",
+    fontFamily: "Inter-Thin",
     color: "#969696",
     marginTop: 4,
     marginLeft: 25,
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: 18,
-    fontFamily: "Inter_600SemiBold"
+    fontFamily: "Inter-SemiBold"
   },
   textInputFocused: {
     borderColor: '#367AFF', 
