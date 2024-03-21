@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 
 
-
 const styles = StyleSheet.create({
   buttonPlacement: {
     flex: 1,
@@ -15,8 +14,8 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontFamily: "Inter-Bold"
   },
-  fontInterThin: {
-    fontFamily: "Inter-Thin",
+  fontInterRegular: {
+    fontFamily: "Inter-Regular",
     color: "#969696",
     marginTop: 4,
     marginLeft: 25,

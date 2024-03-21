@@ -3,6 +3,12 @@ import { View, Text } from 'react-native';
 import SignUp from './src/screens/SignUp/SignUp';
 import background from './src/styles/globalStyles';
 import * as Font from 'expo-font';
+import SignIn from './src/screens/SignIn/SignIn';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
 
 
 const App = () => {
@@ -11,7 +17,7 @@ const App = () => {
   useEffect(() => {
     const loadFonts = async () => {
       await Font.loadAsync({
-        'Inter-Thin': require('./assets/fonts/Inter-Thin.ttf'),
+        'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
         'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.ttf'),
         'Inter-Bold': require('./assets/fonts/Inter-Bold.ttf'),
       });
@@ -25,7 +31,12 @@ const App = () => {
   }
   return (
     <View style={background.container}>
-      <SignUp />
+      <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+      </Stack.Navigator>
+    </NavigationContainer>
     </View>
   );
 }

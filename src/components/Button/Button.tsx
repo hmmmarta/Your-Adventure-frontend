@@ -6,7 +6,7 @@ interface ButtonProps {
   text: string;
   onPress: () => void;
 }
-const Button = ({ text, onPress }: ButtonProps) => {
+const button = ({ text, onPress }: ButtonProps) => {
   return (
     <SafeAreaView style={styles.buttonPlacement}>
       <View>
@@ -18,4 +18,4 @@ const Button = ({ text, onPress }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default button;

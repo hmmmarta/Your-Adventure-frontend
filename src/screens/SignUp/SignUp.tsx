@@ -1,24 +1,23 @@
-
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import styles from './styles';
 import background from '../../styles/globalStyles';
-import SignUpButton from '../../components/buttons/Button';
+import Button from '../../components/Button/Button';
 
 
-const SignUp = () => {
+const SignUp = (navigation) => {
   
   return (
     
     <View style={background.container}>
 
       <Text style={styles.fontInterBold}>Sign up</Text>
-      <Text style={styles.fontInterThin}>Sign up to start Your Adventure!</Text>
+      <Text style={styles.fontInterRegular}>Sign up to start Your Adventure!</Text>
       <StatusBar style="auto"/>
       <TextInputExample />
-      <SignUpButton />
+      <Button text='Sign Up' onPress={()=>Alert.alert('Welcome')} />
     </View>
   );
 }
