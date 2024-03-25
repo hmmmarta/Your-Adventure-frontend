@@ -5,7 +5,7 @@ import styles from "../Input/styles";
 
 const Input = ({ control, name, rules = {}, placeholder, secureTextEntry }) => {
     return (
-        <View >
+        <View>
             <Controller
                 control={control}
                 name={name}

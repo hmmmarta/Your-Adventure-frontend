@@ -3,6 +3,7 @@ import {
   Text,
   SafeAreaView,
   TouchableOpacity,
+  TextInput,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
@@ -67,7 +68,7 @@ const SignUp = () => {
             },
           }}
         />
-        <View style={styles.view}>
+        <View >
           <Input
             control={control}
             name="password"

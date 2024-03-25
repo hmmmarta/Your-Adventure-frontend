@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
   textInputFocused: {
     borderColor: "#367AFF",
   },
+
   btnEye: {
+    position: 'absolute',
+    right: 40,
+    top: 50
 
   },
-  view: {
-
-
-  }
 
 });
 

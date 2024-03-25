@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
         borderColor: "#D9D9D9",
         borderRadius: 10,
         color: "#969696",
-        //flex:1,
     },
     textInputFocused: {
         borderColor: "#367AFF",
