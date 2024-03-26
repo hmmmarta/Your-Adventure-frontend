@@ -1,44 +1,47 @@
-import React, {useState, useEffect} from 'react'
-import { View, Text } from 'react-native';
-import SignUp from './src/screens/SignUp/SignUp';
-import background from './src/styles/globalStyles';
-import * as Font from 'expo-font';
-import SignIn from './src/screens/SignIn/SignIn';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import SignUp from './src/screens/SignUp/SignUp';
+import SignIn from './src/screens/SignIn/SignIn';
+import ForgotPassword from './src/screens/ForgotPassword/ForgotPassword';
+import * as Font from 'expo-font';
+import CompleteEnter from './src/screens/CompleteEnter/CompleteEnter';
+import Home from './src/screens/Home/Home';
 
 const Stack = createStackNavigator();
 
-
-
 const App = () => {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  useEffect(() => {
-    const loadFonts = async () => {
-      await Font.loadAsync({
-        'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
-        'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.ttf'),
-        'Inter-Bold': require('./assets/fonts/Inter-Bold.ttf'),
-      });
-      setFontsLoaded(true);
-    };
-    loadFonts();
-  }, []);
+  const [fontsLoaded] = Font.useFonts({
+    'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
+    'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.ttf'),
+    'Inter-Bold': require('./assets/fonts/Inter-Bold.ttf'),
+  });
 
   if (!fontsLoaded) {
-    return <Text>Loading fonts...</Text>;
+    return null;
   }
+  
   return (
-    <View style={background.container}>
-      <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="SignUp" component={SignUp} />
+    <NavigationContainer>
+      <Stack.Navigator
+        //initialRouteName="SignIn"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: 'transparent',
+            borderWidth: 0,
+          },
+          headerTintColor: '#fff',
+          headerTransparent: true,
+        }}
+      >
+        <Stack.Screen name="SignIn" component={SignIn} options={{ headerTitle: '' }} />
+        <Stack.Screen name="SignUp" component={SignUp} options={{ headerTitle: '' }} />
+        <Stack.Screen name='ForgotPassword' component={ForgotPassword} options={{ headerTitle: '' }} />
+        <Stack.Screen name='CompleteEnter' component={CompleteEnter} options={{ headerTitle: '' , headerLeft: null}} />
+        <Stack.Screen name='Home' component={Home} options={{ headerTitle: '' , headerLeft: null}} />
       </Stack.Navigator>
     </NavigationContainer>
-    </View>
   );
 }
-export default App;
 
+export default App;

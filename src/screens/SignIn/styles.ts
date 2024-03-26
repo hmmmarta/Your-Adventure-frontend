@@ -21,6 +21,32 @@ const styles = StyleSheet.create ({
         marginLeft: 25,
         fontSize: 17
       },
+      input: {
+        flexDirection: 'row',
+        position: 'relative',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: 50,
+        marginTop: 10,
+        marginHorizontal: 25,
+        borderWidth: 1.5,
+        paddingLeft: 20,
+        borderColor: "#D9D9D9",
+        borderRadius: 10,
+        color: "#969696"
+      },
+      textInputFocused: {
+        
+        borderColor: '#367AFF', 
+      },
+      btnEye: {
+        position: 'absolute',
+        right: 40,
+        top: 50
+        //marginLeft: 10
+      },
+      
+      
 });
 
 export default styles;
